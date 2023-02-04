@@ -18,6 +18,7 @@ text-align: center;
 `
 export const TbodyStyle = styled.tbody`
 background-color: #e4f0f5;
+font-size:16px;
 `
 export const TrStyle = styled.tr`
 &nth-child(even)${TbodyStyle}{
