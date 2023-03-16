@@ -2,10 +2,11 @@ import { StatsItem } from "Stats/StatsItem";
 import { StatListStyle } from "./Data.styled";
 import { TitleStyle } from "./Data.styled";
 import { StatisticStyle } from "./Data.styled";
+import PropTypes from "prop-types";
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({title, stats }) => {
     return (<StatisticStyle> 
-        <TitleStyle>UPLOAD STATS</TitleStyle>
+      <TitleStyle> { title}</TitleStyle>
         <StatListStyle>
         
         {
@@ -19,3 +20,7 @@ export const Statistics = ({ stats }) => {
 }
 
 
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.string.isRequired,
+    };

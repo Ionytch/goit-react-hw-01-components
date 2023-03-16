@@ -3,6 +3,7 @@ import { TableStyle } from "./Transaction.styled";
 import { ThStyle } from "./Transaction.styled";
 import { TheadStyle } from "./Transaction.styled";
 import { TrTableStyle } from "./Transaction.styled";
+import PropTypes from "prop-types";
 
 
 export const TransactionHistory = ({items}) => {
@@ -20,3 +21,7 @@ export const TransactionHistory = ({items}) => {
     </TableStyle>
     )
 }
+
+TransactionHistory.propTypes = {
+  items: PropTypes.string.isRequired,
+  };

@@ -1,6 +1,8 @@
 import { FriendCard } from "Friend/FriendCard";
 import { FriendsListStyle } from "./Friends.styled";
 import { ListFriend } from "./Friends.styled";
+import PropTypes from "prop-types";
+
 
 export const FriendList = ({ friends }) => {
     return (
@@ -11,3 +13,7 @@ export const FriendList = ({ friends }) => {
         </FriendsListStyle>
     )
 }
+
+FriendList.propTypes = {
+    friends: PropTypes.string.isRequired,
+  };

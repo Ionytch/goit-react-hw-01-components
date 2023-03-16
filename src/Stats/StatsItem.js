@@ -1,6 +1,7 @@
 import { StatItemStyle } from "./Data.styled";
 import { LableStatStyle } from "./Data.styled";
 import { PercentStyle } from "./Data.styled";
+import PropTypes from "prop-types";
 
 export const StatsItem = ({ data: { label, percentage } }) => {
     return(
@@ -11,3 +12,8 @@ export const StatsItem = ({ data: { label, percentage } }) => {
            
     )
 }
+
+StatsItem.propTypes = {
+    label: PropTypes.string.isRequired,
+    percentage:PropTypes.number.isRequired,
+    };

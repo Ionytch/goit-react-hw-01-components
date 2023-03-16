@@ -1,6 +1,7 @@
 import { FriendCardItem } from "./FriendCard.styled";
 import { NameStyle } from "./FriendCard.styled";
 import { StatusStyle } from "./FriendCard.styled";
+import PropTypes from "prop-types";
 
 export const FriendCard = ({ data: { avatar, name, isOnline } }) => {
     return (
@@ -12,3 +13,9 @@ export const FriendCard = ({ data: { avatar, name, isOnline } }) => {
       
     )
 }
+
+FriendCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  avatar:PropTypes.object,
+  isOnline: PropTypes.bool.isRequired,
+  };

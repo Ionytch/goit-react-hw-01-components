@@ -7,6 +7,7 @@ import { UserDescription } from "./User.styled";
 import { UserTextStyle1 } from "./User.styled";
 import { UserTextStyle2 } from "./User.styled";
 import { UserImage } from "./User.styled";
+import PropTypes from "prop-types";
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
@@ -39,3 +40,11 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
     </UserCard>
   )
 }
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+    stats: PropTypes.number.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.object,
+    tag: PropTypes.string.isRequired,
+  };
