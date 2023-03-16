@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 export const Statistics = ({title, stats }) => {
     return (<StatisticStyle> 
-      <TitleStyle> { title}</TitleStyle>
+      {title&&(<TitleStyle> {title}</TitleStyle>)}
         <StatListStyle>
         
         {
